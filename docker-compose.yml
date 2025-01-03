@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  teso-db:
+    image: postgres:15
+    container_name: teso-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres_password
+      POSTGRES_DB: telegram_db
+    ports:
+      - "5435:5432"
+    volumes:
+      - teso-postgres-data:/var/lib/postgresql/data
+    networks:
+      - teso-network
+
+networks:
+  teso-network:
+    name: teso-network
+
+volumes:
+  teso-postgres-data:
+    name: teso-postgres-data
