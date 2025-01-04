@@ -13,6 +13,8 @@ aiofiles = "^24.1.0"
 sqlalchemy = {extras = ["asyncio"], version = "^2.0.36"}
 psycopg2 = "^2.9.10"
 asyncpg = "^0.30.0"
+python-telegram-bot = {extras = ["all"], version = "^21.10"}
+nest-asyncio = "^1.6.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.0.0"

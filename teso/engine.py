@@ -14,7 +14,7 @@ import logging
 from typing import Optional, Dict, List
 import aiofiles
 from dotenv import load_dotenv
-from .channels import ALL_CHANNELS  # or TELEGRAM_CHANNELS if you prefer
+from .channels import ALL_CHANNELS 
 import sys
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
