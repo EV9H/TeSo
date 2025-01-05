@@ -63,11 +63,12 @@ async def search(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(
             f"Sorry, an error occurred while searching: {str(e)}"
         )
+TOKEN =  os.getenv("TELEGRAM_BOT_TOKEN")
 
 def run_bot():
     """Run the bot."""
     # Create the Application
-    application = Application.builder().token("7155648704:AAGs6f8ObXaw00XuO-Mb_eRoE4AhU6R5k68").build()
+    application = Application.builder().token(TOKEN).build()
 
     # Add handlers
     application.add_handler(CommandHandler("start", start))
